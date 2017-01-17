@@ -1,1 +1,1 @@
-# SoftUni Programing Fundamentalstest repo
+# SoftUni Programing Fundamentalstest repo
