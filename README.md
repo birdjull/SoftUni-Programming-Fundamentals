@@ -1,2 +1,1 @@
-# SoftUni Programing Fundamentals
-
+# SoftUni Programing Fundamentalstest repo
