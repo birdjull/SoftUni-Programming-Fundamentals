@@ -1,1 +1,1 @@
-# SoftUni Programing Fundamentalsdone for try
+# SoftUni Programing FundamentalsExercises done.
