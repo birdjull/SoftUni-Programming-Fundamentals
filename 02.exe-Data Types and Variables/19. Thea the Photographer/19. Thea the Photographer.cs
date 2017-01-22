@@ -10,20 +10,24 @@ namespace _19
     {
         static void Main(string[] args)
         {
-            var pictureCount = int.Parse(Console.ReadLine());
-            var fTime = int.Parse(Console.ReadLine());
-            var filterPercentage = int.Parse(Console.ReadLine());
-            var uploadTime = int.Parse(Console.ReadLine());
 
-            var fiterSeconds = pictureCount * fTime;
-            var goodPictures = (int)Math.Ceiling(pictureCount * ((double)filterPercentage / 100));
-            var uploadSeconds = goodPictures * uploadTime;
+            int pictureCount = int.Parse(Console.ReadLine());
+            int fTime = int.Parse(Console.ReadLine());
+            int filterFactor = int.Parse(Console.ReadLine());
+            int uploadTime = int.Parse(Console.ReadLine());
 
-            var totalSeconds = (fiterSeconds + uploadSeconds);            
-            var totalTime = new TimeSpan(0,0,totalSeconds);
+            double filterPercentage = filterFactor / 100.0;
+            int goodPictures = (int)Math.Ceiling(pictureCount * filterPercentage);
 
-            Console.WriteLine(totalTime.ToString(@"d\:hh\:mm\:ss"));
+            long totalPictures = pictureCount * (long)fTime;
+            long uploadedPictures = goodPictures * (long)uploadTime;
 
+
+            long totals = (totalPictures + uploadedPictures);
+
+
+            Console.WriteLine(TimeSpan.FromSeconds(totalPictures + uploadedPictures)
+                .ToString(@"d\:hh\:mm\:ss"));
 
 
         }
